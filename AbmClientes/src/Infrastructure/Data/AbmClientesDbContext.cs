@@ -15,6 +15,11 @@ namespace Aban.AbmClientes.Infrastructure.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
+            InitialClientesSeed(modelBuilder);
+        }
+
+        private void InitialClientesSeed(ModelBuilder modelBuilder)
+        {
             modelBuilder.Entity<Cliente>().HasData(
                 new Cliente
                 {

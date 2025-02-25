@@ -1,8 +1,7 @@
 ﻿namespace Aban.AbmClientes.Core.Entities
 {
-    public class Cliente
+    public class Cliente: BaseEntity
     {
-        public int Id { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public DateOnly FechaDeNacimiento { get; set; }
